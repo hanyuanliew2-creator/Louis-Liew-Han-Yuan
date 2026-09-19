@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123b2e">
+  <meta name="description" content="Connect with Louis Liew Han Yuan for personal financing, credit cards and mortgage enquiries.">
+  <title>Louis Liew Han Yuan | Financial Solutions</title>
+  <style>
+    :root {
+      --green-950: #09251c;
+      --green-900: #123b2e;
+      --green-800: #19513e;
+      --green-700: #237254;
+      --mint: #dcece3;
+      --gold: #d8bd7a;
+      --ink: #17231e;
+      --muted: #68766f;
+      --paper: #f7f8f5;
+      --white: #fff;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--ink); background: var(--paper);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    .topbar { background: var(--green-950); color: #eaf3ed; font-size: .83rem; }
+    .topbar-inner, .nav-inner, .container { width: min(1120px, calc(100% - 40px)); margin: auto; }
+    .topbar-inner { display:flex; justify-content:space-between; gap:12px; padding:9px 0; }
+    header { background: var(--green-900); color: white; }
+    nav { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:22px 0; }
+    .brand { font-weight:750; letter-spacing:.02em; line-height:1.2; }
+    .brand small { display:block; color:#c8dbd0; font-size:.72rem; font-weight:500; letter-spacing:.12em; margin-top:6px; }
+    .nav-links { display:flex; align-items:center; gap:24px; font-size:.92rem; }
+    .nav-links a { text-decoration:none; color:#e1eee7; }
+    .nav-links a:hover { color:var(--gold); }
+    .hero { background:linear-gradient(135deg, var(--green-900), #1b5a43); color:white; overflow:hidden; }
+    .hero-grid { display:grid; grid-template-columns:1.2fr .8fr; gap:48px; align-items:center; padding:78px 0 88px; }
+    .eyebrow { color:var(--gold); font-size:.78rem; font-weight:750; letter-spacing:.16em; text-transform:uppercase; }
+    h1 { font-size:clamp(2.5rem, 5.5vw, 4.6rem); line-height:1.05; letter-spacing:-.045em; margin:18px 0; }
+    .hero p { max-width:620px; color:#e0eee6; font-size:1.08rem; }
+    .actions { display:flex; flex-wrap:wrap; gap:13px; margin-top:28px; }
+    .btn { display:inline-flex; justify-content:center; align-items:center; gap:9px; padding:13px 20px; border-radius:999px; font-weight:700; text-decoration:none; border:1px solid transparent; transition:transform .15s ease, background .15s ease; }
+    .btn:hover { transform:translateY(-1px); }
+    .btn-gold { background:var(--gold); color:var(--green-950); }
+    .btn-outline { border-color:#9db8aa; color:white; }
+    .hero-card { border:1px solid #739888; background:rgba(5,31,22,.28); border-radius:26px; padding:28px; box-shadow:0 22px 60px #061d1530; }
+    .monogram { width:64px; height:64px; display:grid; place-items:center; border-radius:18px; background:var(--gold); color:var(--green-950); font-size:1.25rem; font-weight:850; }
+    .hero-card h2 { margin:20px 0 5px; font-size:1.35rem; }
+    .hero-card p { font-size:.95rem; margin:0; }
+    .mini-line { height:1px; background:#739888; margin:22px 0; }
+    .trust-note { color:#c8dbd0; font-size:.83rem; }
+    section { padding:76px 0; }
+    .section-head { max-width:700px; margin-bottom:32px; }
+    .section-head .eyebrow { color:var(--green-700); }
+    h2 { font-size:clamp(1.8rem, 3.2vw, 2.7rem); line-height:1.15; letter-spacing:-.03em; margin:10px 0 14px; }
+    .section-head p { color:var(--muted); margin:0; }
+    .services { display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; }
+    .service { background:white; border:1px solid #e4e9e4; border-radius:20px; padding:26px; box-shadow:0 8px 28px #102d1e08; }
+    .service-icon { width:48px; height:48px; border-radius:14px; display:grid; place-items:center; color:var(--green-800); background:var(--mint); font-size:1.35rem; }
+    .service h3 { margin:18px 0 8px; font-size:1.2rem; }
+    .service p { margin:0; color:var(--muted); font-size:.95rem; }
+    .about { background:#edf2ed; }
+    .about-grid { display:grid; grid-template-columns:.8fr 1.2fr; gap:46px; align-items:start; }
+    .about-panel { background:var(--green-900); color:white; padding:30px; border-radius:22px; }
+    .about-panel p { color:#d6e7dd; margin-bottom:0; }
+    .about-copy p { color:var(--muted); }
+    .pill-row { display:flex; flex-wrap:wrap; gap:9px; margin-top:20px; }
+    .pill { background:white; color:var(--green-800); border:1px solid #d8e3da; border-radius:999px; padding:7px 12px; font-size:.84rem; font-weight:650; }
+    .contact { background:var(--green-950); color:white; }
+    .contact-grid { display:flex; align-items:center; justify-content:space-between; gap:30px; }
+    .contact p { color:#c8dbd0; max-width:650px; }
+    footer { background:#061a13; color:#b9cbc1; padding:24px 0; font-size:.8rem; }
+    footer .container { display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+    .disclaimer { font-size:.78rem; color:#829087; margin-top:20px; max-width:900px; }
+    .wa-float { position:fixed; right:20px; bottom:20px; z-index:10; background:#1fae64; color:white; border-radius:999px; padding:13px 18px; text-decoration:none; font-weight:750; box-shadow:0 8px 28px #0003; }
+    @media (max-width:760px) {
+      .topbar-inner { justify-content:center; text-align:center; }
+      .topbar-inner span:last-child { display:none; }
+      nav { align-items:flex-start; }
+      .nav-links { gap:12px; font-size:.8rem; flex-wrap:wrap; justify-content:flex-end; }
+      .hero-grid, .about-grid { grid-template-columns:1fr; gap:28px; }
+      .hero-grid { padding:56px 0 64px; }
+      .services { grid-template-columns:1fr; }
+      section { padding:56px 0; }
+      .contact-grid { align-items:flex-start; flex-direction:column; }
+      .wa-float { right:12px; bottom:12px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } .btn { transition:none; } }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <span>Personal Financial Services · Malaysia</span>
+      <span>Connect directly with Louis</span>
+    </div>
+  </div>
+  <header>
+    <div class="nav-inner">
+      <nav aria-label="Main navigation">
+        <div class="brand">LOUIS LIEW HAN YUAN<small>FINANCIAL SERVICES</small></div>
+        <div class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Your financial solutions partner</div>
+          <h1>Clear guidance.<br>Personal service.</h1>
+          <p>Explore personal financing, credit card and mortgage enquiries with direct assistance from Louis Liew Han Yuan.</p>
+          <div class="actions">
+            <a class="btn btn-gold" href="https://wa.me/60165993622?text=Hi%20Louis%2C%20I%27d%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener noreferrer">Chat on WhatsApp <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-outline" href="#services">Explore services</a>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Louis contact card">
+          <div class="monogram" aria-hidden="true">LL</div>
+          <h2>Louis Liew Han Yuan</h2>
+          <p>Personal Financing Specialist</p>
+          <div class="mini-line"></div>
+          <p class="trust-note">Professional assistance for your financing enquiries, with clear communication throughout the process.</p>
+          <div class="pill-row">
+            <span class="pill">Personal Financing</span>
+            <span class="pill">Credit Cards</span>
+            <span class="pill">Mortgage</span>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">What I can help with</div>
+          <h2>Financial services</h2>
+          <p>Choose a service below to start a direct WhatsApp enquiry. Eligibility, approval and terms are subject to the relevant financial institution’s assessment.</p>
+        </div>
+        <div class="services">
+          <article class="service">
+            <div class="service-icon" aria-hidden="true">↗</div>
+            <h3>Personal Financing</h3>
+            <p>Discuss your financing needs and learn about the application process and required documents.</p>
+            <div class="actions"><a class="btn btn-gold" href="https://wa.me/60165993622?text=Hi%20Louis%2C%20I%27m%20interested%20in%20Personal%20Financing." target="_blank" rel="noopener noreferrer">Enquire now ↗</a></div>
+          </article>
+          <article class="service">
+            <div class="service-icon" aria-hidden="true">▣</div>
+            <h3>Credit Cards</h3>
+            <p>Ask about card application requirements, supporting documents and the next steps.</p>
+            <div class="actions"><a class="btn btn-gold" href="https://wa.me/60165993622?text=Hi%20Louis%2C%20I%27m%20interested%20in%20Credit%20Cards." target="_blank" rel="noopener noreferrer">Enquire now ↗</a></div>
+          </article>
+          <article class="service">
+            <div class="service-icon" aria-hidden="true">⌂</div>
+            <h3>Mortgage</h3>
+            <p>Start a conversation about home financing and the information you may need to prepare.</p>
+            <div class="actions"><a class="btn btn-gold" href="https://wa.me/60165993622?text=Hi%20Louis%2C%20I%27m%20interested%20in%20Mortgage%20enquiries." target="_blank" rel="noopener noreferrer">Enquire now ↗</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div class="about-panel">
+          <div class="eyebrow">Direct assistance</div>
+          <h2>Here to guide your next step.</h2>
+          <p>Have a question? Send a message and let’s discuss what information may be needed for your enquiry.</p>
+        </div>
+        <div class="about-copy">
+          <div class="eyebrow">About Louis</div>
+          <h2>Personal attention, from enquiry to application.</h2>
+          <p>Louis Liew Han Yuan provides assistance with financial service enquiries and application guidance. This page is designed to make it easy for you to learn about the services and get in touch directly.</p>
+          <div class="pill-row">
+            <span class="pill">Clear communication</span>
+            <span class="pill">Direct contact</span>
+            <span class="pill">Application guidance</span>
+          </div>
+          <p class="disclaimer">This is a personal information page and is not an official website of any bank or financial institution. All products and applications are subject to the relevant institution’s eligibility criteria, approval, terms and conditions. No approval or outcome is guaranteed. Please do not send passwords, OTPs or sensitive account details through this website.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <div class="eyebrow">Let’s connect</div>
+          <h2>Have a question?</h2>
+          <p>Tap below to open WhatsApp and send Louis a message directly.</p>
+        </div>
+        <a class="btn btn-gold" href="https://wa.me/60165993622?text=Hi%20Louis%2C%20I%27d%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener noreferrer">Message Louis on WhatsApp ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>© <span id="year">2026</span> Louis Liew Han Yuan</span>
+      <span>Personal Financial Services · Malaysia</span>
+    </div>
+  </footer>
+  <a class="wa-float" href="https://wa.me/60165993622?text=Hi%20Louis%2C%20I%27d%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener noreferrer" aria-label="Chat with Louis on WhatsApp">WhatsApp ↗</a>
+</body>
+</html>
